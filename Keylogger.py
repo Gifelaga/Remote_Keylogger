@@ -22,8 +22,3 @@ if __name__ == '__main__':
     listener = keyboard.Listener(on_press=keyPressed)
     listener.start()
     input()
-
-if __name__ == '__main__':
-    listener = keyboard.Listener(on_press=keyPressed)
-    listener.start()
-    input()
