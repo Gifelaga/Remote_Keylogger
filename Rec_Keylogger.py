@@ -1,10 +1,5 @@
 import socket
 import threading
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
-
-super_secret_key = b'super_secret_key'
-cipher = AES.new(super_secret_key, AES.MODE_ECB)
 
 HOST = 'localhost'
 PORT = 6969
@@ -13,7 +8,7 @@ def handle_client(client_socket):
     log = ''
     while True:
         try:
-            log += unpad(cipher.decrypt(client_socket.recv(1024)[:-1]), 16).decode()
+            log += client_socket.recv(1024)[:-1].decode()
             with open('log.txt', 'w') as f:
                 f.write(log)
         except:
